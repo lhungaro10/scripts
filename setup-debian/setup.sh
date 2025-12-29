@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Carrega utilitários comuns
-if [ -f "./utils.sh" ]; then
-    source ./utils.sh
+if [ -f "./scripts/utils.sh" ]; then
+    source ./scripts/utils.sh
 else
     echo "Erro: utils.sh não encontrado."
     # Define cores básicas caso utils falhe, para não quebrar os echos coloridos abaixo
@@ -17,12 +17,12 @@ fi
 # LISTA DE MÓDULOS
 # ==========================================
 AVAILABLE_MODULES=(
-    "install_dependencies.sh|Dependências do Sistema (Essencial)"
-    "setup_git.sh|Configuração do Git & SSH"
-    "setup_zsh.sh|Terminal Zsh & Oh My Zsh + Starship"
-    "setup_docker.sh|Docker Engine & Docker Compose"
-    "setup_java.sh|Java 17 LTS (OpenJDK) & JAVA_HOME" # <--- NOVA LINHA
-    "setup_vscode.sh|Visual Studio Code & Extensões"
+    "scripts/install_dependencies.sh|Dependências do Sistema (Essencial)"
+    "scripts/setup_git.sh|Configuração do Git & SSH"
+    "scripts/setup_zsh.sh|Terminal Zsh & Oh My Zsh + Starship"
+    "scripts/setup_docker.sh|Docker Engine & Docker Compose"
+    "scripts/setup_java.sh|Java 17 LTS (OpenJDK) & JAVA_HOME"
+    "scripts/setup_vscode.sh|Visual Studio Code & Extensões"
 )
 
 TO_EXECUTE=()
@@ -88,12 +88,12 @@ fi
 echo -e "\nIniciando..."
 
 for SCRIPT in "${TO_EXECUTE[@]}"; do
-    if [ -f "./$SCRIPT" ]; then
+    if [ -f "$SCRIPT" ]; then
         # Garante permissão de execução
-        chmod +x "./$SCRIPT"
-        
+        chmod +x "$SCRIPT"
+
         # Executa o script
-        ./"$SCRIPT"
+        "$SCRIPT"
         
         EXIT_CODE=$?
         if [ $EXIT_CODE -ne 0 ]; then
