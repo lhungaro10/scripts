@@ -156,8 +156,8 @@ O script utiliza cores para facilitar a leitura:
 ```
 setup-debian/
 ├── setup.sh                      # Script principal (orchestrator)
+├── CHANGELOG.md                  # Histórico de versões e mudanças
 ├── INSTRUCTIONS.md               # Este arquivo
-├── README.md                     # Documentação do projeto
 └── scripts/
     ├── utils.sh                  # Funções auxiliares e cores
     ├── install_dependencies.sh   # Módulo 1: Dependências
@@ -252,4 +252,6 @@ Este script é fornecido como está. Sinta-se livre para:
 - Adicionar novos módulos à lista
 - Compartilhar melhorias
 
-**Última atualização**: Dezembro 2025
+**Histórico de Mudanças**: Consulte o [CHANGELOG.md](CHANGELOG.md) para versões e atualizações.
+
+**Última atualização**: 29 de Dezembro de 2025

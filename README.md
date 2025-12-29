@@ -26,26 +26,52 @@ cd setup-debian
 
 📖 [Documentação completa](setup-debian/INSTRUCTIONS.md)
 
+### 🛠️ Dev Utils - Update Changelog
+**Localização**: `dev-utils/update-changelog/`
+
+Script para gerenciar e manter arquivos CHANGELOG.md de forma padronizada e automatizada.
+
+**Características:**
+- ✅ Atualização automática de versões (major, minor, patch)
+- ✅ Organização por categorias (Added, Changed, Fixed, Removed)
+- ✅ Compatível com Keep a Changelog e Semantic Versioning
+- ✅ Interface interativa para adicionar entradas
+- ✅ Preserva histórico completo
+
+**Quick Start:**
+```bash
+cd dev-utils/update-changelog
+./update-changelog.sh /path/to/CHANGELOG.md [major|minor|patch]
+```
+
+📖 [Documentação completa](dev-utils/update-changelog/INSTRUCTIONS.md)
+
 ---
 
 ## 📂 Estrutura do Projeto
 
 ```
 scripts/
-├── README.md                     # Este arquivo
+├── README.md                          # Este arquivo
 │
-└── setup-debian/                 # Setup automatizado Debian 13
-    ├── setup.sh                  # Orquestrador principal
-    ├── INSTRUCTIONS.md           # Instruções detalhadas
-    ├── README.md                 # Overview do setup
-    └── scripts/
-        ├── utils.sh              # Funções auxiliares
-        ├── install_dependencies.sh
-        ├── setup_git.sh
-        ├── setup_zsh.sh
-        ├── setup_docker.sh
-        ├── setup_java.sh
-        └── setup_vscode.sh
+├── setup-debian/                      # Setup automatizado Debian 13
+│   ├── setup.sh                       # Orquestrador principal
+│   ├── CHANGELOG.md                   # Histórico de mudanças
+│   ├── INSTRUCTIONS.md                # Instruções detalhadas
+│   └── scripts/
+│       ├── utils.sh                   # Funções auxiliares
+│       ├── install_dependencies.sh    # Dependências do sistema
+│       ├── setup_git.sh               # Configuração Git/SSH
+│       ├── setup_zsh.sh               # Terminal Zsh + Oh My Zsh
+│       ├── setup_docker.sh            # Docker Engine
+│       ├── setup_java.sh              # Java 17 LTS
+│       └── setup_vscode.sh            # VS Code + extensões
+│
+└── dev-utils/                         # Utilitários de desenvolvimento
+    ├── README.md                      # Overview
+    └── update-changelog/              # Gerenciador de CHANGELOG
+        ├── update-changelog.sh        # Script principal
+        └── INSTRUCTIONS.md            # Instruções
 ```
 
 ---
@@ -187,4 +213,4 @@ Desenvolvido e mantido por desenvolvedores que valorizam automação e eficiênc
 
 **⭐ Se este projeto te ajudou, considere dar uma estrela!**
 
-*Última atualização: Dezembro 2025*
+*Última atualização: 29 de Dezembro de 2025*

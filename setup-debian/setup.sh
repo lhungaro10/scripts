@@ -20,6 +20,7 @@ AVAILABLE_MODULES=(
     "scripts/install_dependencies.sh|Dependências do Sistema (Essencial)"
     "scripts/setup_git.sh|Configuração do Git & SSH"
     "scripts/setup_zsh.sh|Terminal Zsh & Oh My Zsh + Starship"
+    "scripts/setup_nvm.sh|Node.js (NVM), NPM e Yarn"   # <--- NOVA LINHA AQUI
     "scripts/setup_docker.sh|Docker Engine & Docker Compose"
     "scripts/setup_java.sh|Java 17 LTS (OpenJDK) & JAVA_HOME"
     "scripts/setup_vscode.sh|Visual Studio Code & Extensões"
